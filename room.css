@@ -1,0 +1,267 @@
+/* Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-color: #4285F4; /* Google Classroom blue */
+    --text-color: #333;
+    --card-bg-color: #f4f4f4;
+    --sidebar-width: 250px;
+}
+
+body {
+    min-height: 100vh;
+    background-image: url(hehe.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    flex-direction: column; /* Stack elements vertically */
+    justify-content: flex-start; /* Align to the top */
+    align-items: center;
+    min-height: 100vh; /* Ensures full viewport height */
+    margin: 0;
+}
+/* Sidebar */
+/* Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --hold-height: 150px; /* Default height for the .hold and .holdd elements */
+}
+
+body {
+    min-height: 100vh;
+    background-image: url(hehe.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    flex-direction: column; /* Stack elements vertically */
+    justify-content: flex-start; /* Align to the top */
+    align-items: center;
+    min-height: 100vh; /* Ensures full viewport height */
+    margin: 0;
+}
+
+nav {
+    position: fixed;
+    top: 0; /* Fix it to the top of the screen */
+    background-color: white;
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    z-index: 1000; /* Ensure it's above other elements */
+    margin-top: 0; /* Remove the negative margin */
+}
+
+nav ul {
+    width: 100%;
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+nav li {
+    height: 50px;
+}
+
+nav a {
+    height: 100%;
+    padding: 0 20px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    color: black;
+}
+
+nav a:hover {
+    background-color: #f0f0f0;
+}
+
+nav li:first-child {
+    margin-right: auto;
+}
+/* Sidebar */
+.sidebar {
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 250px;
+    z-index: 999;
+    background-color: white;
+    backdrop-filter: blur(10px);
+    box-shadow: -10px 0 10px rgba(0, 0, 0, 0.1);
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+.sidebar li {
+    width: 100%;
+}
+
+.sidebar a {
+    width: 100%;
+}
+
+/* Main Content */
+.content {
+    margin-top: 80px;
+    width: 100%;
+    padding: 20px;
+
+}
+
+/* Header */
+header {
+    margin-bottom: 20px;
+}
+
+header h1 {
+    font-size: 2.5rem;
+}
+
+header p {
+    font-size: 1rem;
+    color: #555;
+}
+
+/* Classwork Feed */
+.main-content {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.class-info {
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+.classwork-feed {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.card {
+    background-color: var(--card-bg-color);
+    padding: 20px;
+    width: calc(33% - 20px);
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.card h3 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+.card p {
+    font-size: 1rem;
+    color: #666;
+}
+
+.card a {
+    display: inline-block;
+    margin-top: 10px;
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.card a:hover {
+    text-decoration: underline;
+}
+
+/* Announcements Section */
+.announcements {
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+.announcements h2 {
+    margin-bottom: 15px;
+}
+
+.announcements ul {
+    list-style-type: none;
+}
+
+.announcements li {
+    margin-bottom: 10px;
+    color: #555;
+}
+
+/* Class Materials Section */
+.class-materials {
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+.class-materials h2 {
+    margin-bottom: 15px;
+}
+
+.class-materials ul {
+    list-style-type: none;
+}
+
+.class-materials li {
+    margin-bottom: 10px;
+    color: #555;
+}
+
+.class-materials a {
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+.class-materials a:hover {
+    text-decoration: underline;
+}
+
+/* Mobile Adjustments */
+@media (max-width: 768px) {
+    .main-content {
+        flex-direction: column;
+    }
+
+    .classwork-feed {
+        flex-direction: column;
+    }
+
+    .card {
+        width: 100%;
+    }
+
+    nav {
+        position: fixed;
+        top: 0;
+        left: -250px;
+        transition: left 0.3s ease;
+    }
+
+    nav.open {
+        left: 0;
+    }
+}

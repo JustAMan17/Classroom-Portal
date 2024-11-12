@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="room.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <title>SVCC portal</title>
+</head>
+<body>
+    <!-- Sidebar -->
+    <nav>
+        <ul class="sidebar">
+            <li onclick="hideSidebar()">
+                <a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#000000"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg></a>
+            </li>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Help</a></li>
+            <li><a href="#">Settings</a></li>
+            <li> <a href="page1.html">Logout</a></li>
+        </ul>
+        <ul>
+            <li><a href="home.html">Hi, Student!</a></li>
+            <li><a href="Profile.html">Profile</a></li>
+            <li><a href="course.html">Courses</a></li>
+            <li><a href="All_Grade.html">All Grades</a></li>
+            <li onclick="showSidebar()"><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#000000"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg></a></li>
+        </ul>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="content">
+        <header>
+            <h1>PF101: Object Oriented Programing</h1>
+            <p>Instructor: Prof. name | Section: 2A6</p>
+        </header>
+        
+        <section class="main-content">
+            <!-- Course Overview -->
+            <div class="class-info">
+                <h2>Course Overview</h2>
+                <p>Welcome to OOP! In this course, we will cover the basics of programming, including writing and debugging code, understanding algorithms, and working with data structures. Prepare for quizzes and assignments that will help you understand the core concepts of programming and develop your coding skills.</p>
+            </div>
+            
+            <!-- Assignments Section -->
+            <div class="classwork-feed">
+                <div class="card">
+                    <h3>Assignment 1: Make a LogIn Page</h3>
+                    <p>Due Date: Nov 20, 2024</p>
+                    <a href="#">View Assignment</a>
+                </div>
+                <div class="card">
+                    <h3>Quiz 1: Recursion</h3>
+                    <p>Due Date: Nov 22, 2024</p>
+                    <a href="#">Take Quiz</a>
+                </div>
+            </div>
+            
+            <!-- Announcements Section -->
+            <div class="announcements">
+                <h2>Announcements</h2>
+                <ul>
+                    <li>Reminder: Quiz on Nov 22! Study Chapter 3.</li>
+                    <li>Assignment 1 feedback available in grades section.</li>
+                    <li>Join the class discussion on "Methods" next week!</li>
+                </ul>
+            </div>
+
+            <!-- Class Materials -->
+            <div class="class-materials">
+                <h2>Class Materials</h2>
+                <ul>
+                    <li><a href="#">Lecture Notes - Week 1</a></li>
+                    <li><a href="#">Chapter 2: Contructors</a></li>
+                    <li><a href="#">Slides: Graphic User Interface</a></li>
+                </ul>
+            </div>
+        </section>
+    </div>
+
+    <!-- Sidebar Script -->
+    <script>
+        function showSidebar() {
+            const sidebar = document.querySelector('.sidebar');
+            sidebar.style.display = 'flex';
+        }
+
+        function hideSidebar() {
+            const sidebar = document.querySelector('.sidebar');
+            sidebar.style.display = 'none';
+        }
+    </script>
+</body>
+</html>

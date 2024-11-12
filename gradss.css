@@ -1,0 +1,125 @@
+/* Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --hold-height: 150px; /* Default height for the .hold and .holdd elements */
+}
+
+body {
+    min-height: 100vh;
+    background-image: url(hehe.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    flex-direction: column; /* Stack elements vertically */
+    justify-content: flex-start; /* Align to the top */
+    align-items: center;
+    min-height: 100vh; /* Ensures full viewport height */
+    margin: 0;
+}
+
+nav {
+    position: fixed;
+    top: 0; /* Fix it to the top of the screen */
+    background-color: white;
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    z-index: 1000; /* Ensure it's above other elements */
+    margin-top: 0; /* Remove the negative margin */
+}
+
+nav ul {
+    width: 100%;
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+nav li {
+    height: 50px;
+}
+
+nav a {
+    height: 100%;
+    padding: 0 20px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    color: black;
+}
+
+nav a:hover {
+    background-color: #f0f0f0;
+}
+
+nav li:first-child {
+    margin-right: auto;
+}
+/* Sidebar */
+.sidebar {
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 250px;
+    z-index: 999;
+    background-color: white;
+    backdrop-filter: blur(10px);
+    box-shadow: -10px 0 10px rgba(0, 0, 0, 0.1);
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+.sidebar li {
+    width: 100%;
+}
+
+.sidebar a {
+    width: 100%;
+}
+
+/* Positioning h1 */
+h1 {
+    margin-top: 100px;
+    text-align: center;
+}
+
+/* Table Styling */
+table {
+    width: 90%;
+    max-width: 800px;
+    margin-top: 90px; /* Adds space between h1 and table */
+    margin: 0 auto;
+    box-shadow: 0 0 20px rgb(68, 0, 0);
+}
+
+/* Media Queries */
+@media (min-width: 768px) {
+    nav ul {
+        justify-content: space-between;
+    }
+
+    .sectors .hold, .section .holdd, .sections .holdd {
+        width: 30%;
+    }
+
+    .courses {
+        width: 80%;
+    }
+}
+
+@media (min-width: 1024px) {
+    .sidebar {
+        display: flex;
+    }
+}
